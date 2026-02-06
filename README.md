@@ -33,7 +33,7 @@ The file is now considered ready for transfer within the controlled lab scenario
 
 ![4](https://github.com/user-attachments/assets/54f6f2be-022a-4baf-9dd9-1d918ebd6c44)
 
-##Ethical Disclaimer
+## Ethical Disclaimer
 
 This project was conducted strictly for educational purposes in a controlled virtual lab environment.
 No real systems were targeted, and no unauthorized access was performed.
