@@ -33,8 +33,64 @@ The file is now considered ready for transfer within the controlled lab scenario
 
 ![4](https://github.com/user-attachments/assets/54f6f2be-022a-4baf-9dd9-1d918ebd6c44)
 
+## Transferring the Backdoor Using a Web Server
+
+To simulate a realistic file delivery method, a local Apache web server was used on the attacker machine.
+
+Hosting the Backdoor File
+
+The backdoor executable was moved into the Apache web server directory:
+
+/var/www/html/backdoor/
+
+Placing the file in this directory makes it accessible over HTTP to systems within the same network.
+
+![1](https://github.com/user-attachments/assets/8d625f59-8041-4e4f-a8bb-cadd51c72f19)
+
+## Verifying the Web Server
+
+After starting the Apache service, the web server was accessed from the target system.
+The appearance of the Apache default page confirms that the HTTP service is running correctly and reachable.
+
+![2](https://github.com/user-attachments/assets/ccb6a797-e77b-4de3-9418-611f060fd99e)
+
+Accessing and Downloading the Backdoor
+
+Finally, the target system navigated to the backdoor directory hosted on the web server:
+
+http://ATTACKER_IP/backdoor/
+
+
+At this location, the backdoor executable was listed and successfully downloaded.
+This demonstrates a common real-world technique where malicious files are delivered through web servers.
+
+![3](https://github.com/user-attachments/assets/77795c55-1f38-476c-ae5a-711a7aa289a1)
+
+
 ## Ethical Disclaimer
 
 This project was conducted strictly for educational purposes in a controlled virtual lab environment.
 No real systems were targeted, and no unauthorized access was performed.
 The purpose of this lab is to understand attacker techniques in order to improve defensive security awareness.
+
+## Conclusion
+
+This lab demonstrated the full workflow of:
+
+Analyzing and selecting a payload
+
+Creating a backdoor executable
+
+Hosting the payload on a web server
+
+Transferring the payload to a target system
+
+Understanding these techniques is critical for detecting and preventing real-world attacks.
+
+## References
+
+Metasploit Framework Documentation
+
+Kali Linux Documentation
+
+Apache Web Server Documentation
